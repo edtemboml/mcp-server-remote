@@ -1,0 +1,14 @@
+{
+	"servers": {
+		"mcp-remote-server-http": {
+			"type": "stdio",
+			"command": "npx",
+			"args": [
+				"mcp-remote",
+				"http://localhost:3001/mcp",
+				"--allow-http"
+			]
+		}
+	},
+	"inputs": []
+}
