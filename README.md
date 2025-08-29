@@ -41,7 +41,39 @@ uv add fastmcp
 uv add mcp[cli]
 uv add asyncio
 ```
-## Usage
+
+## Deploy to Google Cloud Run (Alternative)
+
+You can deploy the server to Google Cloud Run for a managed, scalable deployment:
+
+1. Install the Google Cloud SDK and authenticate or use Cloud Shell:
+```bash
+gcloud auth login
+gcloud config set project YOUR_PROJECT_ID
+```
+
+2. Configure deployment settings in `gcloud_infra.bash`:
+```bash
+# Edit these variables in gcloud_infra.bash
+export PROJECT_ID="your-project-id"
+export REGION="your-region"      # e.g., us-central1
+export SERVICE_NAME="mcp-server"
+```
+
+3. Deploy to Cloud Run:
+```bash
+# Make the script executable
+chmod +x gcloud_infra.bash
+# Deploy
+./gcloud_infra.bash
+```
+
+The deployment script will:
+- Build and push the Docker image
+- Deploy to Cloud Run with appropriate settings
+- Output the service URL
+
+## Alternatively - Deploy Server Locally
 
 1. Start the server:
 ```bash
