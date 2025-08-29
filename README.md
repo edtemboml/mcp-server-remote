@@ -57,7 +57,7 @@ gcloud config set project YOUR_PROJECT_ID
 # Edit these variables in gcloud_infra.bash
 export PROJECT_ID="your-project-id"
 export REGION="your-region"      # e.g., us-central1
-export SERVICE_NAME="mcp-server"
+export SERVICE_NAME="remote-mcp-server-1" # or anything fitting.
 ```
 
 3. Deploy to Cloud Run:
