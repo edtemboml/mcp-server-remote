@@ -11,10 +11,6 @@ async def safely_extract_text(result: CallToolResult) -> str:
         if not result:
             return ""
         
-        # if result.isError:
-        #     # Handle error results
-        #     return f"Error: {getattr(result, 'message', 'Unknown error')}"
-        
         if not hasattr(result, 'content') or not result.content:
             return ""
         
