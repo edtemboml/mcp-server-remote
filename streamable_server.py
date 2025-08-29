@@ -1,6 +1,6 @@
 from mcp.server.fastmcp import FastMCP
 
-mcp = FastMCP("Server", host="localhost", port=3001 )
+mcp = FastMCP("Server", port=3001 )
 
 
 @mcp.resource('inventory://items/overstock')

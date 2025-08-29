@@ -5,7 +5,7 @@
 			"command": "npx",
 			"args": [
 				"mcp-remote",
-				"http://localhost:3001/mcp",
+				"http://20.64.150.149:3001/mcp",
 				"--allow-http"
 			]
 		}
